@@ -1,0 +1,182 @@
+! I don't know what is Javascript?
+
+JavaScript is a programming language used primarily to make websites interactive. It runs in your web browser and allows you to add functionality to web pages, such as pop-ups, animations, and dynamic content. JavaScript is also used in other environments, such as server-side applications and desktop applications.
+
+Some common uses of JavaScript include form validation, making elements on a page change in response to user actions, displaying messages and alerts, and retrieving data from external sources.
+
+JavaScript is a powerful language that is constantly evolving, and is used by web developers all over the world to create engaging and dynamic websites.
+
+
+! Why javascript is functional programming language?
+
+JavaScript is often described as a "functional programming language" because it supports many of the features and concepts that are central to functional programming.
+
+In functional programming, the emphasis is on creating functions that perform specific tasks and can be composed together to solve more complex problems. Functions are treated as first-class citizens, which means that they can be passed around as arguments to other functions, returned as values, and assigned to variables.
+
+JavaScript supports all of these features, as well as other functional programming concepts such as closures, immutability, and higher-order functions.
+
+Closures allow functions to access variables from their outer scopes even after those scopes have been exited. Immutability means that data is treated as immutable and unchanging, which helps to prevent unexpected side effects. Higher-order functions are functions that can take other functions as arguments or return functions as their results, which enables powerful abstractions and code reuse.
+
+All of these concepts are central to functional programming, and JavaScript's support for them makes it a popular choice for developers who want to write code in a functional style.
+
+
+
+! Objects:
+
+? In contrast, objects are used to store keyed collections of various data and more complex entities. In JavaScript, objects penetrate almost every aspect of the language. So we must understand them first before going in-depth anywhere else.
+An object can be created with figure brackets {…} with an optional list of properties. A property is a “key: value” pair, where key is a string (also called a “property name”), and value can be anything.
+
+We can imagine an object as a cabinet with signed files. Every piece of data is stored in its file by the key. It’s easy to find a file by its name or add/remove a file.
+
+
+An empty object (“empty cabinet”) can be created using one of two syntaxes:
+
+let user = new Object(); // "object constructor" syntax
+let user = {};  // "object literal" syntax
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For ultimate reuse and encapsulation, let’s explore getting data back out of functions.
+
+Through learning how to return values from functions, we lead to more powerful use cases.
+
+Whilst learning about implicit and explicit return, I’ll also introduce to you the idea of a “factory function”, a software design pattern.
+
+Let’s first take a function that creates a new item:
+
+function makeDrink(name, price) {
+  const drink = {
+    name,
+    price
+  };
+  // do something with `drink`
+}
+
+makeDrink('Lemonade', 299);
+Our new drink object is ready to go, what next?
+
+It might be tempting to add further logic inside the function, but this would start to introduce complexity and more behavior.
+
+I believe a function should perform one job, and do it well. Even if it’s one line of code.
+
+So, we turn to this idea of “encapsulation” and instead return the item:
+
+function makeDrink(name, price) {
+  return {
+    name,
+    price
+  };
+}
+
+const drink = makeDrink('Lemonade', 299);
+// { name: 'Lemonade', price: 299 }
+console.log(drink);
+Our function is small, focused and testable. It’s easy to think about when looking at the code too.
+
+With this out the way, let’s get to the next step of the article - “explicit” and “implicit” return statements.
+
+If you see the return keyword, you’ve explicitly returned from your function.
+
+So what about “implicit”? All functions will return on their own, even if you don’t write it. It’s how they jump out of the current execution context and move onto the next step of your code.
+
+If we don’t return anything, there’s no need to use return, unless we want to exit the function early.
+
+Here’s a different example that talks to an external variable cart, does not return, therefore it implicitly returns:
+
+const cart = [];
+
+function addToCart(drink) {
+  cart.push(drink);
+}
+
+addToCart('Lemonade');
+Once the JavaScript compiler has reached the end of the function, the implicit return is made.
+
+Essentially, that makes these example equivalent:
+
+function addToCart(drink) {
+  cart.push(drink);
+  return; // explicit return
+}
+
+function addToCart(drink) {
+  cart.push(drink);
+  // implicit return
+}
+That’s not all, we’ve not talked about ES2015 (ES6) arrow functions.
+
+Arrow functions are a more recent addition to JavaScript and are sometimes referred to as the “fat arrow syntax”.
+
+It’s common to use arrow functions with function expressions, even as a replacement for function declarations, so let’s refactor our first example:
+
+const makeDrink = (name, price) => {
+  return {
+    name,
+    price
+  };
+};
+
+const drink = makeDrink('Lemonade', 299);
+// { name: 'Lemonade', price: 299 }
+console.log(drink);
+Arrow functions are unique because they feature “long” and “short” versions.
+
+The long version allows us to use both explicit and implicit returns, and the short version will implicit return always - but with your data:
+
+// longhand syntax
+const getDiscount = () => {
+  return 0.5;
+};
+
+// shorthand syntax
+const getDiscount = () => 0.5;
+This makes it an effective one-line function that is clear, concise and readable.
+
+These functions are commonly seen in functional programming, and often referred to as “lambda functions”.
+
+I switched to this example to demonstrate returning data that was not an object. Why? Because this trips people up.
+
+Looking back at our function, an object {} also shares the same braces as the function’s opening and closing:
+
+const makeDrink = (name, price) => {
+  return {
+    name,
+    price
+  };
+};
+It’s common to attempt something like this, even though at first glance it almost looks like we’re implicitly returning an object:
+
+// ❌ Throws an Error
+const makeDrink = (name, price) => {
+  name,
+  price
+};
+There’s a little trick involved that does in fact allow us to do this, but we need to wrap the object braces {} inside parenthesis:
+
+// ✅ Works nicely!
+const makeDrink = (name, price) => ({
+  name,
+  price
+});
+This tells the JavaScript compiler to treat it as an expression, and is completely valid code.
+
+An expression is then returned and not mistaken for opening and closing function braces.

@@ -1,0 +1,21 @@
+Four Pillars of OOP-->
+
+1. Abstraction--> Implementation hide 
+2. Encapsulation--> Properties and Method are bunding or Encapsulate
+3. Inhertance--> mean containing the characteristics of others within oneself.
+4. Polymorphism--> The same objects look a lot thats mean Polymorphic becauese an object  can express itself in different 
+                   forms
+
+What is Abstraction?
+=>Abstraction is one of the key concepts of OPP languages. Its main goal  is to handle complexity by hiding unnecessary details from the user. That enables the user to Implement more complex logic on the top of the provided Abstraction without understanding or even thinking about all the hidden complexity.
+
+// 1. Abstraction-- > Implementation hiding. Hiding unnecessary details from the user.
+
+What is Encapsulation?
+=>Encapsulation is one of the fundamental concepts in OOP. It deccribes the idea of bunding data and Method that work on that data within one unit.
+
+What is Inhertance?
+=> Inhertance is one of the core concepts of OOP languages. It is a mechanism where you can to derive a class from another class for hierarchy of classes that share a set of attributes and Method.
+
+What is Polymorphism?
+=> The word Polymorphism is used in various contexts and describes situation in which something occurs in several different forms. In conputer  science, it describes the concept that object of different types can be accessed through the same interface. Each type can provide its own, independent Implementation of this interface. It is one of the core concepts of OOP.
