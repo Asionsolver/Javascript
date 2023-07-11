@@ -1,6 +1,6 @@
 // ! How to Loop Throw HTML Collection in Javascript
 
-// let listItem = document.getElementsByTagName('li'); // ? returns node list
+// let listItem = document.getElementsByTagName('li'); // ? returns HTML Collection of list
 // console.log(listItem)
 
 
