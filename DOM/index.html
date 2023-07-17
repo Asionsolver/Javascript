@@ -6,19 +6,22 @@
     <title>DOM</title>
   </head>
   <body>
+    <p>Click "Remove" to remove the first item from the list:</p>
+    <button onclick="myFunction()">Remove</button>
     <div class="containers" id="topic">
       <ul class="list-group" id="list">
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
+        <li class="list-items" id="list-item-one">One</li>
+        <li class="list-items">Two</li>
+        <li class="list-items">Three</li>
       </ul>
     </div>
 
     <div id="myDiv" class="red bold">This is class Name.</div>
 
     <!-- <script src="CreateDOMElements.js"></script> -->
-    <script src="InsertAdjacentElement.js"></script>
+    <!-- <script src="InsertAdjacentElement.js"></script> -->
     <!-- <script src="className.js"></script> -->
     <!-- <script src="classList.js"></script> -->
+    <script src="updateAndRemoveElements.js"></script>
   </body>
 </html>
