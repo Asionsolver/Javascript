@@ -78,3 +78,21 @@ body {
   background: #fff;
   color: #25bcff;
 }
+
+.containers .btn-add {
+  width: 50%;
+  margin: 40px 0 5px 0;
+  padding: 10px;
+  color: #fff;
+  background: #b003f4;
+  border: none;
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+.box {
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+  background: #57b321;
+}
