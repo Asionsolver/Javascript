@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Form and Form Validation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title" class="text-center my-3">
+        Learn Form and Form Validation
+      </h1>
+
+      <ul class="list-group my-5" id="list">
+        <li class="list-group-item" id="list-item-ones">ONE</li>
+        <li class="list-group-item">TWO</li>
+        <li class="list-group-item">THREE</li>
+        <li class="list-group-item">FOUR</li>
+        <li class="list-group-item">FIVE</li>
+      </ul>
+
+      <div class="">
+        <div class="form-group">
+          <label for="name">What is Your Name</label>
+          <input
+            type="text"
+            class="form-control mt-3"
+            id="name"
+            placeholder="Enter Name"
+          />
+          <p id="show-name" class="mt-3 fw-semibold text-success"></p>
+        </div>
+
+        <div class="my-5">
+          <label class="mb-3">Choose Your Skills</label>
+          <div class="form-check mb-2">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="HTML"
+              id="html"
+            />
+            <label class="form-check-label" for="gridCheck1"> HTML </label>
+          </div>
+          <div class="form-check mb-2">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="CSS"
+              id="css"
+            />
+            <label class="form-check-label" for="gridCheck2"> CSS </label>
+          </div>
+          <div class="form-check mb-2">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="JavaScript"
+              id="javaScript"
+            />
+            <label class="form-check-label" for="gridCheck3">
+              JavaScript
+            </label>
+          </div>
+          <div class="form-check mb-2">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="React"
+              id="react"
+            />
+            <label class="form-check-label" for="gridCheck4"> React </label>
+          </div>
+          <div class="form-check mb-2">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Vue.js"
+              id="vue"
+            />
+            <label class="form-check-label" for="gridCheck5"> Vue.js </label>
+          </div>
+          <div class="form-check mb-2">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Angular"
+              id="angular"
+            />
+            <label class="form-check-label" for="gridCheck6"> Angular </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom JS -->
+    <script src="inputBoxEvent.js"></script>
+  </body>
+</html>
