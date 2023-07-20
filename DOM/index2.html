@@ -50,6 +50,7 @@
               type="checkbox"
               value="HTML"
               id="html"
+              name="skills"
             />
             <label class="form-check-label" for="gridCheck1"> HTML </label>
           </div>
@@ -59,6 +60,7 @@
               type="checkbox"
               value="CSS"
               id="css"
+              name="skills"
             />
             <label class="form-check-label" for="gridCheck2"> CSS </label>
           </div>
@@ -68,6 +70,7 @@
               type="checkbox"
               value="JavaScript"
               id="javaScript"
+              name="skills"
             />
             <label class="form-check-label" for="gridCheck3">
               JavaScript
@@ -79,6 +82,7 @@
               type="checkbox"
               value="React"
               id="react"
+              name="skills"
             />
             <label class="form-check-label" for="gridCheck4"> React </label>
           </div>
@@ -88,6 +92,7 @@
               type="checkbox"
               value="Vue.js"
               id="vue"
+              name="skills"
             />
             <label class="form-check-label" for="gridCheck5"> Vue.js </label>
           </div>
@@ -97,8 +102,16 @@
               type="checkbox"
               value="Angular"
               id="angular"
+              name="skills"
             />
             <label class="form-check-label" for="gridCheck6"> Angular </label>
+          </div>
+
+          <div>
+            <p class="lead">
+              <strong>Selected Skills:</strong>
+            </p>
+            <span id="result" class="text-info fw-bold"></span>
           </div>
         </div>
       </div>
@@ -117,6 +130,7 @@
     ></script>
 
     <!-- Custom JS -->
-    <script src="inputBoxEvent.js"></script>
+    <!-- <script src="inputBoxEvent.js"></script> -->
+    <script src="checkBoxEvent.js"></script>
   </body>
 </html>
