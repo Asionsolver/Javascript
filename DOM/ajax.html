@@ -17,10 +17,44 @@
     ></script>
   </head>
   <body>
-    <div class="container" id="cont">
+    <!-- <div class="container" id="cont">
       <button class="btn btn-primary my-5" id="load">Load Posts</button>
       <ul id="post" class="list-group"></ul>
-    </div>
+    </div> -->
+    <form class="mx-3" action="" id="post-form">
+      <label><strong>Please Fill The Form</strong></label>
+      <div class="form-group mt-2">
+        <label class="mb-1" for="title">Please Provide a Title</label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          class="form-control"
+          placeholder="Enter Title"
+        />
+      </div>
+
+      <div class="form-group mt-2">
+        <label class="mb-1" for="body">Please Provide a Description</label>
+        <textarea
+          name="body"
+          id="body"
+          cols="30"
+          rows="10"
+          class="form-control"
+          placeholder="Enter Description"
+        ></textarea>
+      </div>
+
+      <input
+        type="submit"
+        value="submit"
+        id="button"
+        class="btn btn-primary mt-3"
+      />
+    </form>
+
+    <ul id="post" class="list-group"></ul>
 
     <!-- Bootstrap CDN Link -->
     <script
@@ -34,6 +68,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- Custom JS File -->
-    <script src="ajaxGetRequest.js"></script>
+    <!-- <script src="ajaxGetRequest.js"></script> -->
+    <script src="ajaxSendPostRequest.js"></script>
   </body>
 </html>
