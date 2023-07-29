@@ -4,14 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All DOM selectors NodeList and HTMLCollection</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #1e1d1e;
+      }
+
+      .heading {
+        color: white;
+      }
+      .text {
+        color: white;
+      }
+      .think {
+        color: rgb(111, 4, 138);
+      }
+      .list {
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <div class="bg-black">
-      <h1 class="heading">All DOM selectors NodeList and HTMLCollection</h1>
+      <h1 id="title" class="heading">
+        All DOM selectors NodeList and HTMLCollection<span style="display: none"
+          >Difference Between TextContent & InnerHTML</span
+        >
+      </h1>
+      <h4 class="think">Lorem ipsum dolor sit amet.</h4>
+      <h4 class="think">Illum suscipit fugiat ipsam. Facere.</h4>
+      <h4 class="think">Distinctio quod veritatis recusandae pariatur?</h4>
+      <h4 class="think">Molestias at molestiae obcaecati iure.</h4>
       <p class="text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
         voluptatum.
       </p>
+
+      <!-- <input
+      type="password" name="Please enter password" class="input-field"
+      id="password" /> -->
     </div>
+    <ul class="list">
+      <li>One</li>
+      <li>Three</li>
+      <li>Two</li>
+    </ul>
+
+    <script src="selectors.js"></script>
   </body>
 </html>
