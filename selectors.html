@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial: More on CSS Selectors</title>
+
+    <style>
+      /* div p {
+        color: red;
+      } */
+
+      /* .container .row ul .separate {
+        color: rgb(5, 161, 161);
+      } */
+
+      /* .container .row .item p {
+        color: blue;
+      } */
+      /* if p is right inside div then this css will be applied. */
+      /* div > p {
+        color: rgb(128, 0, 0);
+      } */
+
+      /* uf o us right after div i.e p  is the next sibling of div */
+      /* div + p {
+        color: rgb(126, 128, 0);
+      } */
+
+      /* .container .row > .text-item {
+        color: yellow;
+      } */
+
+      div ~ p {
+        color: rgb(0, 128, 128);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+      <div class="row">
+        <ul>
+          <li class="item"><p>This is another paragraph inside li.</p></li>
+          <li class="item"><p>This is another paragraph inside li.</p></li>
+          <li class="separate">This will be not affected.</li>
+        </ul>
+        <p class="text-item">This is paragraph inside div element</p>
+        <p class="text-item">This is paragraph inside div element</p>
+      </div>
+      <p>This in paragraph inside div elements.</p>
+    </div>
+    <p class="items">This is paragraph with outsides.</p>
+  </body>
+</html>
