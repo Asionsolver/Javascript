@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit and remove elements in DOM | Javascript</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Edit and remove elements in DOM</h1>
+    <ul class="language"></ul>
+
+    <script>
+      function addLanguage(languages) {
+        const li = document.createElement("li");
+        li.innerHTML = `${languages}`;
+        document.querySelector(".language").appendChild(li);
+      }
+
+      addLanguage("Javascript");
+      addLanguage("Python");
+
+      function addLanguageOpt(languages) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(languages));
+        document.querySelector(".language").appendChild(li);
+      }
+
+      addLanguageOpt("Java");
+      addLanguageOpt("C++");
+      addLanguageOpt("C");
+
+      // Edit element
+      const editElement = document.querySelector(".language li:nth-child(3)");
+
+      const editElement2 = document.querySelector(".language li:nth-child(4)");
+      const edit = document.createElement("li");
+      const edit2 = document.createElement("li");
+
+      // Not a good way to edit element
+      //   edit.textContent = "C#";
+      //   editElement.replaceWith(edit);
+
+      // best way to edit element
+      edit.appendChild(document.createTextNode("C#"));
+      editElement.replaceWith(edit);
+
+      edit2.appendChild(document.createTextNode("MySql"));
+      editElement2.replaceWith(edit2);
+
+      const editElement3 = document.querySelector(".language li:last-child");
+      editElement3.outerHTML = "<li>Mojo</li>";
+
+      // Remove element
+      //   const removeElement = document.querySelector(".language li:nth-child(4)");
+      //   removeElement.remove();
+    </script>
+  </body>
+</html>
