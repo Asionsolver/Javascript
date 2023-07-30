@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Scheme Switcher</title>
+    <style>
+      body {
+        background-color: #000000d3;
+      }
+
+      .heading {
+        text-align: center;
+        font-size: 40px;
+        margin: 2rem;
+        color: rgb(255, 255, 255);
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 25px;
+      }
+      .container span {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        cursor: pointer;
+        border: 2px solid rgb(216, 216, 216);
+      }
+
+      #orange {
+        background-color: orange;
+      }
+
+      #purple {
+        background-color: purple;
+      }
+
+      #red {
+        background-color: red;
+      }
+
+      #indigo {
+        background-color: indigo;
+      }
+
+      .text {
+        text-align: center;
+        font-size: 18px;
+        margin: 2rem;
+        color: rgb(255, 238, 0);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Color Scheme Switcher</h1>
+    <div class="container">
+      <span class="button" id="orange"></span>
+      <span class="button" id="purple"></span>
+      <span class="button" id="red"></span>
+      <span class="button" id="indigo"></span>
+    </div>
+
+    <div class="text">
+      Try clicking on one of the colors above tho change the background color of
+      this page!
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
