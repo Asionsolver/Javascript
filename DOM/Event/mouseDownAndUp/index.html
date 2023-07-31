@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 150px;
+        height: 50px;
+        border: none;
+        display: flex;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        align-items: center;
+        font-family: sans-serif;
+        justify-content: center;
+        background-color: #d94a38;
+      }
+    </style>
+  </head>
+  <body>
+    <button onmousedown="mDown(this)" onmouseup="mUp(this)">Click Me</button>
+
+    <script>
+      function mDown(obj) {
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.style.color = "black";
+        obj.innerHTML = "Release Me";
+      }
+
+      function mUp(obj) {
+        obj.style.backgroundColor = "#D94A38";
+        obj.innerHTML = "Thank You";
+      }
+    </script>
+  </body>
+</html>
