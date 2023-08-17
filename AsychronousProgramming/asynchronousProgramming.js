@@ -1,19 +1,20 @@
-// What is Synchronous?
-// Existing or occurring at the same time.
+console.log('I am Line One');
 
-// What is Synchronous Programming?
-// Synchronous basically means that you can only execute one thing at a time.
+setTimeout(() => {
+    console.log('I am Line Two');
+    }, 3000);
 
-var a = 1;
-var b = 2;
+setTimeout(() => {
+    console.log('I am Line Three');
+},0);
 
-var result = a + b;
-console.log(result);
+console.log('I am Line Four');
 
-var response = storeResult(result);
+setTimeout(() => {
+    console.log('I am Line Five');
+}, 1000);
 
-if (response.success){
-    console.log("The result was stored successfully");
-} else {
-    console.log("The result was not stored successfully");
-}
+// setTimeout(() => {
+//     console.log('I am Line One');
+// }, 1000);
+ 
